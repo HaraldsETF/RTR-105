@@ -29,3 +29,4 @@ touch -t 202201241925 start (uztaisa failu start un norāda datumu un laiku kad 
 gcc (veido izpildāmo failu)
 gcc -save-temps ... -o ... (-o veido izpildamo failu ar konkretu nosakukumu)(-save-temps .i .s .o failus)
 ./a.out (palaiž compileri kas atrodaš šeit, mapē)
+hexdump -C ... (detalizēti bitos parāda failu)
