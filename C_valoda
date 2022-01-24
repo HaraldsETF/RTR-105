@@ -1,1 +1,5 @@
-
+printf(""); (raksti statisku tekstu)
+// raksti komentu rindas 
+/* raksti komentu bloku */
+#include <stdio.h> (pieslēdz bibliotēku piem stdio.h)(hidrofails)
+return 0; (atgriež komandu sākuma pozīcijā, nobeigums
