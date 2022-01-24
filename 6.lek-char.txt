@@ -1,0 +1,55 @@
+#include <stdio.h>
+int main()
+ {
+ char c1; //notiek char datu tipa mainīgā dekleršana
+          //tas nozīmē ka noteiktais 1 baita liels atmiņas apgabals
+          //būs pieejams (nolasāms, ierakstāms), izmantojot idenfikatoru "c1"
+          //atmiņa nav vakuums tur vienmēr ir fizikālo lielumu noteikti līmeņ
+          //loģiskajā līmenō tas nozīmē, ka tur var būt 0101 1010
+          // 1111 0000 vai 0000 0000
+ printf("char datu mainīgā vērtība uzreiz pēc deklarēšanas - %d\n",c1);
+ 
+ char c2 = 100; // notiek char datu tipa mainīgā definēšana
+                // izdalīta vieta atmiņa + tiek piešķirta vērtība
+                // = - tā ir piešķiršanas operācīja
+ 
+ printf("\nchar datu mainīgā vērtība uzreiz pēc definēšanas - %d\n",c2);
+ printf("char datu mainīgā vērtība kā simbols - %c\n",c2); // %c ascii tabulā rodas simbols d
+ printf("char datu mainīgā vērtība kā hex skaitlis - 0x%x\n",c2);
+ printf("char datu mainīgā vērtība kā hex skaitlis - %o\n",c2);
+      // mainīgajiem cenšamies izmantot mnemoniskos nosaukumus
+      // var_count, VarCount, _var_count
+      // var-count - tāds identifikatos neder
+
+ c2 = 'A';
+ printf("\nchar datu mainīgā vērtība pēc jaunas piešķiršanas - %d\n",c2);
+ printf("char datu mainīgā vērtība kā simbols - %c\n",c2);
+ printf("char datu mainīgā vērtība kā hex skaitlis - 0x%x\n",c2);
+ printf("char datu mainīgā vērtība kā hex skaitlis - %o\n",c2);
+ 
+ c2 = 350;
+ printf("\nchar datu mainīgā vērtība pēc jaunas piešķiršanas - %d\n",c2);
+ printf("char datu mainīgā vērtība kā simbols - %c\n",c2);
+ printf("char datu mainīgā vērtība kā hex skaitlis - 0x%x\n",c2);
+ printf("char datu mainīgā vērtība kā hex skaitlis - %o\n",c2);
+   // 350 = 246   +   64  +  16   +   8   +   4   +   2
+   //       1*2^8 + 1*2^6 + 1*2^4 + 1*2^3 + 1*2^2 + 1*2^1
+   //                    98   ( 7|654 3210 )
+   //            0000  0001   ( 0|101 1110 )
+   //                           + 64+16+8+4+2 = +94
+
+ c2 = 390;
+ printf("\nchar datu mainīgā vērtība pēc jaunas piešķiršanas - %d\n",c2);
+ printf("char datu mainīgā vērtība kā simbols - %c\n",c2);
+ printf("char datu mainīgā vērtība kā hex skaitlis - 0x%x\n",c2);
+ printf("char datu mainīgā vērtība kā hex skaitlis - %o\n",c2);
+   // 390 = 246   +   128  +   4   +   2
+   //       1*2^8 + 1*2^7  + 1*2^2 + 1*2^1
+   //                    98   ( 7|654 3210 )
+   //            0000  0001   ( 1|000 0110 )
+   //                           -|111 1001
+   //                                   +1
+   //                           -|111 1010
+   //                           - (64+32+16+8+2) = -122
+ return 0;
+ }
