@@ -1,4 +1,4 @@
-printf(""); (raksti statisku tekstu)
+printf(""); (raksti statisku tekstu) \n (liec beigās, lai pārceltu vietu, kur raksta uz nākamo rindu)
 // raksti komentu rindas 
 /* raksti komentu bloku */
 #include <stdio.h> (pieslēdz bibliotēku piem stdio.h)(hidrofails)
