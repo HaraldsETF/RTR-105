@@ -16,7 +16,7 @@ int main()
  printf("\nchar datu mainīgā vērtība uzreiz pēc definēšanas - %d\n",c2);
  printf("char datu mainīgā vērtība kā simbols - %c\n",c2); // %c ascii tabulā rodas simbols d
  printf("char datu mainīgā vērtība kā hex skaitlis - 0x%x\n",c2);
- printf("char datu mainīgā vērtība kā hex skaitlis - %o\n",c2);
+ printf("char datu mainīgā vērtība kā octavs skaitlis - %o\n",c2);
       // mainīgajiem cenšamies izmantot mnemoniskos nosaukumus
       // var_count, VarCount, _var_count
       // var-count - tāds identifikatos neder
@@ -25,13 +25,13 @@ int main()
  printf("\nchar datu mainīgā vērtība pēc jaunas piešķiršanas - %d\n",c2);
  printf("char datu mainīgā vērtība kā simbols - %c\n",c2);
  printf("char datu mainīgā vērtība kā hex skaitlis - 0x%x\n",c2);
- printf("char datu mainīgā vērtība kā hex skaitlis - %o\n",c2);
+ printf("char datu mainīgā vērtība kā octavs skaitlis - %o\n",c2);
  
  c2 = 350;
  printf("\nchar datu mainīgā vērtība pēc jaunas piešķiršanas - %d\n",c2);
  printf("char datu mainīgā vērtība kā simbols - %c\n",c2);
  printf("char datu mainīgā vērtība kā hex skaitlis - 0x%x\n",c2);
- printf("char datu mainīgā vērtība kā hex skaitlis - %o\n",c2);
+ printf("char datu mainīgā vērtība kā octavs skaitlis - %o\n",c2);
    // 350 = 246   +   64  +  16   +   8   +   4   +   2
    //       1*2^8 + 1*2^6 + 1*2^4 + 1*2^3 + 1*2^2 + 1*2^1
    //                    98   ( 7|654 3210 )
@@ -42,7 +42,7 @@ int main()
  printf("\nchar datu mainīgā vērtība pēc jaunas piešķiršanas - %d\n",c2);
  printf("char datu mainīgā vērtība kā simbols - %c\n",c2);
  printf("char datu mainīgā vērtība kā hex skaitlis - 0x%x\n",c2);
- printf("char datu mainīgā vērtība kā hex skaitlis - %o\n",c2);
+ printf("char datu mainīgā vērtība kā octavs skaitlis - %o\n",c2);
    // 390 = 246   +   128  +   4   +   2
    //       1*2^8 + 1*2^7  + 1*2^2 + 1*2^1
    //                    98   ( 7|654 3210 )
