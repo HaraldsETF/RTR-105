@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+ char c;
+ int i;
+ float f;
+ double d;
+ 
+ printf("Šis kompilātors vienam char\'am piešķir %d baitus\n",sizeof(c));
+ printf("Šis kompilātors vienam int\'am piešķir %d baitus\n",sizeof(i));
+ printf("Šis kompilātors vienam float\'am piešķir %d baitus\n",sizeof(f));
+ printf("Šis kompilātors vienam double\'am piešķir %d baitus\n",sizeof(d));
+ 
+ printf("\nŠis kompilātors piešķir sizeof rezultātu: %d baitus\n",sizeof(sizeof(c)));
+ 
+ 
+return 0;
+}
