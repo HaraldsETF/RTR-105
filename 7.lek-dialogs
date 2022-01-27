@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+ char s;
+ int i;
+ double d;
+ 
+ printf("Cienījamais lietotāj, lūdzu, ievadi vienu veselu skaitli: "); fflush(stdout);
+ scanf("%d",&i);
+ printf("Tu ievadīji skaitli - %d\n",i); fflush(stdout);
+ 
+ printf("Cienījamais lietotāj, lūdzu, ievadi vienu simbolu: "); fflush(stdout);
+ scanf(" %c",&s);
+ printf("Tu ievadīji simbolu - %c\n",s); fflush(stdout);
+ 
+ printf("Cienījamais lietotāj, lūdzu, ievadi vienu reālu skaitli: "); fflush(stdout);
+ scanf("%lf",&d);
+ printf("Tu ievadīji reālu skaitli - %.2f\n",d); fflush(stdout);
+ 
+return 0;
+}
