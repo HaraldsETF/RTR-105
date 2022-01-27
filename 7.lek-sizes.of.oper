@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+ char c = 100;
+ int i = -14698;
+ float f = 1.569;
+ double d = -4.5e-2; //-4.5 * 10^(-2) = -0.045
+ 
+ printf("char * char rezultāts aizņem %d baitus\n",sizeof(c*c));
+ printf("%d(char) * %d(char) rezultāts skaitliski ir : %d\n",c,c,(c*c));
+ 
+ printf("char * int rezultāts aizņem %d baitus\n",sizeof(c*i));
+ printf("char * float rezultāts aizņem %d baitus\n",sizeof(c*f));
+ printf("char * double rezultāts aizņem %d baitus\n",sizeof(c*d));
+ 
+return 0;
+}
