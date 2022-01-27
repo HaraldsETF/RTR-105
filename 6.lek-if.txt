@@ -1,1 +1,48 @@
-
+#include<stdio.h>
+int main()
+{
+ int a,b;
+ 
+ printf("Ievadiet divus skaitļus (a and b): ");
+ fflush(stdout);
+ scanf("%d%d",&a,&b);
+ 
+ //printf("%d == %d operācijas rezultāts - %d (rezultāta izmērs baitos - %d)\n",a,b,a==b,sizeof(a==b));
+ printf("%d >= %d operācijas rezultāts - %d (rezultāta izmērs baitos - %d)\n",a,b,a>=b,sizeof(a>=b));
+ printf("%d != 0 operācijas rezultāts - %d (rezultāta izmērs baitos - %d)\n",a,a!=0,sizeof(a!=0));
+ printf("%d >= %d && %d != 0 kopēja nosacījuma rezultāts - ",a,b,a);
+ printf("%d (rezultāta izmērs baitos - %d)\n",a>=b && a!=0,sizeof(a>=b && a!=0));
+ 
+ if( a>=b && a!=0 )
+  {
+  printf("\n(a versija)  a ir lielāks, vienāds ar b un a nav vienāds ar nulli\n");
+  }
+ 
+ if( a>=b )
+  {
+  if (a!=0 )
+  printf("\n(b versija) a ir lielāks, vienāds ar b un a nav vienāds ar nulli\n");
+  }
+ 
+/*
+ if( a==b ) //tālāk sekojošās darbības no darbību bloka {} tiek izpildītas
+         // ja if iekavās ir iegūts ne nulles rezultāts
+  {
+  printf("\na ir vienāds ar b\n");
+  }
+ else
+  {
+  printf("\na nav vienāds ar b\n");
+  if(a>b)
+   {
+   printf("Vēl vairāk, a ir lielāks par b\n");
+   }
+  }
+ 
+ if( a )
+  {
+  printf("\nUn a mainīgā vērtība nav nulle\n");
+  }
+*/
+ return 0;
+}
