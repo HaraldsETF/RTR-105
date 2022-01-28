@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+char c2, c1;
+int;
+ 
+ printf("Ievadiet naturālu skaitli: "); fflush(stdout);
+ scanf("%d", &c2);
+ printf("Tavs skaitlis bināri ir -  %o \n", c2); fflush(stdout);
+ 
+ return 0;
+}
