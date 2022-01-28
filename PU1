@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+ int a;
+ long long int b, c;
+ 
+ printf("Ievadi skaitli četri simti tūkstoši: "); fflush(stdout);
+ scanf("%d", &a);
+ 
+ printf("Ievadi skaitli simts tūkstoši: "); fflush(stdout);
+ scanf("%lli", &b);
+ 
+ c = a*b;
+ printf("Reizināšanas operācijas rezultāts: %lli\n",c); fflush(stdout);
+ 
+return 0;
+}
