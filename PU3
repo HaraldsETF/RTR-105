@@ -1,0 +1,65 @@
+#include<stdio.h>
+int main()
+ {
+  int a,b,c,h,k;
+  printf("Ievadi, cik ciparus tu vēlies ievadīt(3 lūdzu): "); fflush(stdout);
+  scanf("%d",&h);
+  int number[h];
+  printf("Ievadi kādus ciparus tu vēlies(ar atstarpēm): "); fflush(stdout);
+  
+  for( a=0 ; a<h ; a++ )
+   {
+    scanf("%d",&number[a]);
+   }
+  while(1)
+   {
+    printf("Ja vēlies redzēt savus ciparus attēlotus augošā secībā, tad ievadi 1\n");
+    printf("Ja vēlies redzēt savus ciparus attēlotus dilstošā secībā, tad ievadi 2\n");
+    printf("(ctr+c lai pārtrauktu izvēli)Tava izvēle: "); fflush(stdout);
+    scanf("%d",&k);
+  switch(k)
+   {
+   case 1: 
+    for( a=0 ; a<h ; a++ )
+    {
+    for( b=a+1 ; b<h ; b++ )
+    {
+    if(number[a]>number[b])
+    {
+     c=number[a];
+     number[a]=number[b];
+     number[b]=c;
+    }
+    }
+    }
+   printf("\nTavi cipari augošā secībā\n");
+   for( a=0 ; a<h ; a++ )
+    {
+     printf("%d\n",number[a]);
+    }
+   break;
+  case 2:
+   for( a=0 ; a<h ; a++ )
+   {
+   for( b=a+1 ; b<h ; b++)
+   {
+   if(number[a]<number[b])
+   {
+    c=number[a];
+    number[a]=number[b];
+    number[b]=c;
+   }
+   }
+   }
+  printf("\nTavi cipari dilstošā secībā\n");
+  for( a=0 ; a<h ; a++ )
+   {
+    printf("%d\n",number[a]);
+   }
+  break;
+ default:printf("\n Nepareiza izvēle \n");
+ break;
+  }
+ }
+return 0;
+}
