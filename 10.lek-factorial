@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+ int k = 0, N, fact=1;
+ 
+ printf("Kādam skaitlim aprēķināt faktoriālu: "); fflush(stdout);
+ scanf("%d",&N);
+ 
+ while(k < N)
+ {
+  k++;
+  fact = fact * k;
+  printf("Skaitļa %d faktoriāls - %d\n",k,fact);
+ }
+ 
+return 0;
+}
