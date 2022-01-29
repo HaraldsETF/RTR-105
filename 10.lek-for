@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main() {
+ /*
+ for( ; ; ){ // lidzīgi kā ar if iekavām - tiek novērtēts vai iekavās starp ; ;
+             // gala rezultāts ir nulle vai nav nulle kamēr nav nulle, tiek
+             // izpildīta tālāk aprakstītā darbība vai darba bloks - { ; ; ; ; ;
+             // }
+  printf("Hello World!\n");
+ }
+ */
+ int k, N;
+ 
+ printf("Cik kādam skaitlim gribētu paskaitīt: "); fflush(stdout);
+ scanf("%d",&N);
+ 
+ for( k = 0 ; k < N ; k += 1 )
+ {
+  printf("%3d\t%3d (k mainīgā vērtība ir %d)",k+1,(k+1)*(k+1),k);
+  // k = k + 1; // vai k++ vai  k += 1;
+  //k = k + 2;        // vai k += 2;
+ 
+ printf("\n");
+ }
+printf("N vērtība no main daļas - %d\n",N);
+printf("k vērtība no main daļas - %d\n",k);
+ 
+ 
+return 0;
+}
