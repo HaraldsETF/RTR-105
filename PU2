@@ -1,12 +1,20 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-char c2, c1;
-int;
- 
- printf("Ievadiet naturālu skaitli: "); fflush(stdout);
- scanf("%d", &c2);
- printf("Tavs skaitlis bināri ir -  %o \n", c2); fflush(stdout);
- 
+ char c1, c2, c3;
+ {
+  printf("Ievadiet naturālu skaitli: "); fflush(stdout);
+  scanf(" %c", &c1); fflush(stdout);
+  printf("Tavs skaitlis bināri ir: ", c1); fflush(stdout);
+ }
+ for (c2 = 7; c2 >= 0; c2--)
+ {
+  c3 = c1 >> c2;
+  if (c3 & 1)
+   printf("1");
+  else
+   printf("0");
+  }
+  printf("\n");
  return 0;
 }
