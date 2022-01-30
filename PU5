@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+ int n, c, f = 1;
+ int a;
+ char f1 = 1;
+ long long f2 = 1;
+ 
+ printf("Ievadi decimālu skaitli: "); fflush(stdout);
+ scanf("%d",&n);
+ printf("Izvēlies, kuru datu tipu lietosi(1=int, 2=char, 3=long long): "); fflush(stdout);
+ scanf("%d",&a);
+ 
+if(a<2)
+{
+ for( c = 1; c <= n; c++ )
+  {
+  f = f * c;
+  }
+  printf("(pēc 12 nav pareizi)Faktoriāls no ievadītā cipara: %d\n",f);
+}
+ 
+if(a==2)
+{
+ for( c = 1; c <= n; c++ )
+  {
+  f1 = f1 * c;
+  }
+  printf("(pēc 5 nav pareizi)Faktoriāls no ievadītā cipara: %d\n",f1);
+}
+ 
+if(a>2)
+{
+ for( c = 1; c <= n; c++ )
+  {
+  f2 = f2 * c;
+  }
+  printf("(pēc 20 nav pareizi)Faktoriāls no ievadītā cipara: %lld\n",f2);
+}
+}
