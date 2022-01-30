@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main()
+{
+ int n, i;
+ int a;
+ int f = 1;
+ i = 1;
+ char c;
+ c = 1;
+ long long l;
+ l = 1;
+ 
+ printf("Ievadi decimālu skaitli: "); fflush(stdout);
+ scanf("%d",&n);
+ printf("Izvēlies, kuru datu tipu lietosi(1=int, 2=char, 3=long long): "); fflush(stdout);
+ scanf("%d",&a);
+ 
+if(a==1)
+ {
+  while(i <= n)
+  {
+   f = f * i;
+   i++;
+  }
+   printf("Fakrotiāls no ievadītā cipara: %d\n",f);
+ }
+ 
+if(a==2);
+ {
+  while(c <= n)
+  {
+   f = f * c;
+   c++;
+  }
+   printf("Fakrotiāls no ievadītā cipara1: %c\n",f);
+ }
+ 
+if(a==3)
+ {
+  while(l <= n)
+  {
+   f = f * l;
+   l++;
+  }
+   printf("Fakrotiāls no ievadītā cipara2: %lld\n",f);
+ }
+}
