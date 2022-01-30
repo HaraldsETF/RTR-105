@@ -1,0 +1,17 @@
+NAV ARGUMENTA UN NAV RETURN
+
+#include<stdio.h>
+void sum();
+void main()
+{
+ sum(5,4);
+}
+ 
+void sum(void)
+{
+ printf("Saskaitot 13 un 27\n");
+ int a=13, b=27, sum=0;
+ sum=a+b;
+ printf("Summa ir %d\n",sum);
+}
+
