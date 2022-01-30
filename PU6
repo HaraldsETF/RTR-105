@@ -36,3 +36,23 @@ int sum(int h, int k)
 {
  return h+k;
 }
+
+NAV ARGUMENTS UN IR RETURN
+
+#include<stdio.h>
+char sum(void);
+void main()
+{
+ float i;
+ i=sum();
+ printf("Summa ir %f\n",i);
+}
+char sum()
+{
+ int x=34,y=46,sum=0;
+ sum=x+y;
+ return sum;
+}
+
+IR ARGUMENTS UN NAV RETURN
+
