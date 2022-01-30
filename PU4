@@ -5,10 +5,8 @@ int main()
  int a;
  int f = 1;
  i = 1;
- char c;
- c = 1;
- long long l;
- l = 1;
+ char f2 = 1;
+ long long f3 = 1;
  
  printf("Ievadi decimālu skaitli: "); fflush(stdout);
  scanf("%d",&n);
@@ -22,26 +20,27 @@ if(a<2)
    f = f * i;
    i++;
   }
-   printf("Fakrotiāls no ievadītā cipara: %d\n",f);
+   printf("(pēc 12 nav pareizi)Fakrotiāls no ievadītā cipara: %d\n",f);
  }
  
 if(a==2)
  {
-  while(c <= n)
+  while(i <= n)
   {
-   f = f * c;
-   c++;
+   f2 = f2 * i;
+   i++;
   }
-   printf("Fakrotiāls no ievadītā cipara1: %c\n",f);
+   printf("(pēc 5 nav pareizi)Fakrotiāls no ievadītā cipara1: %d\n",f2);
  }
  
 if(a>2)
  {
-  while(l <= n)
+  while(i <= n)
   {
-   f = f * l;
-   l++;
+   f3 = f3 * i;
+   i++;
   }
-   printf("Fakrotiāls no ievadītā cipara2: %lld\n",f);
+   printf("(pēc 20 nav pareizi)Fakrotiāls no ievadītā cipara2: %lld\n",f3);
  }
+ 
 }
