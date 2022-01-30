@@ -1,1 +1,34 @@
-
+#include<stdio.h>
+ 
+ //void dialogs(char NN){
+ char dialogs(char NN){ // 2.1.
+ //char N;
+ printf("NN vērtība, kas ir atnākusi no main daļas: %d(izdruka no dialogs funk)",NN); // 2.2.
+ printf("\nKādam skaitlim aprēķināt faktoriālu: "); fflush(stdout); // 2.3.
+ scanf("%hhd",&NN); // 2.4.
+ return NN; // 2.5.
+}
+ char factorial(char N){ // 4.1.
+ char k=0, fact = 1; // 4.2. un 4.3.
+ while(k < N){ // 4.4.1. 4.4.2. utt. kamēr k < N
+ k++;  // 4.5.1., 4.5.2.
+ fact = fact * k; // 4.6.1. 4.6.2.
+ }
+return fact; // 4.7.
+}
+ 
+int main() // sākums
+{
+ char N = 50; // 1.
+ N = dialogs(N); // 2. - dialogs(N) un 3. N =
+ printf("skaitļa %d faktoriāls - %d\n",N,factorial(N)); // 4. factorial(N) un tad viss printf
+ 
+return 0;
+}
+ 
+/*
+void f1(void);
+int f2(void);
+void f3(int ...);
+int f4(int ...);
+*/
