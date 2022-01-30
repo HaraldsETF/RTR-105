@@ -15,3 +15,24 @@ void sum(void)
  printf("Summa ir %d\n",sum);
 }
 
+IR ARGUMENTS UN IR RETURN
+
+#include<stdio.h>
+int sum(int,int);
+void main()
+{
+ int a,b,c;
+ printf("Ievadi pirmo ciparu: "); fflush(stdout);
+ scanf("%d",&a);
+ 
+ printf("Ievadi otru ciparu: "); fflush(stdout);
+ scanf("%d",&b);
+ 
+ c=sum(a,b);
+ printf("Tavu ciparu summa: %d\n",c);
+}
+ 
+int sum(int h, int k)
+{
+ return h+k;
+}
