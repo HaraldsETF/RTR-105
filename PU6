@@ -56,3 +56,16 @@ char sum()
 
 IR ARGUMENTS UN NAV RETURN
 
+#include<stdio.h>
+void sum(float,float,float);
+void main()
+{
+ float a,b,c;
+ printf("Ievadi trīs skaitļus: "); fflush(stdout);
+ scanf("%f%f%f",&a,&b,&c);
+ sum(a,b,c);
+}
+void sum(float a, float b, float c)
+{
+ printf("Trīs skaitļu summa ir %.2f\n",a+b+c);
+}
