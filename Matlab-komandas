@@ -13,4 +13,5 @@ atbilde = sin(lenkis);                              } vienādojums
 atbilde = ...  ...  ...  ...  ...                   }
 CTR + C (pārtrauc iesākto rakstīšanu)
 % * (komentārus uzrāda ar punktu priekša)
-
+t = 0:2:6 (intervāla sākums:pa cik mainās skaitlis:intervāla beigas)
+t = 0  2  4  6
