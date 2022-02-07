@@ -18,3 +18,4 @@ t = 0  2  4  6
 help logspace (atver logspace komandu sarakstu)
 edit (atver logu ar scripta failu)
 edit lisazu (veido scripta failu ar konkrētu nosaukumu)
+SHIFT + bultiņa uz augšu (lai komand history atzīmētu history) 
