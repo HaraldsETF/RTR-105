@@ -1,0 +1,7 @@
+Matricas
+-vektora radīšana
+A = [1 2 3]; (vektori rindā)
+B = [1;2;3]; (vektors kolonā)
+
+-matricas veidošana
+C = [1 2 3 ; 4 5 6 ; 7 8 9];
