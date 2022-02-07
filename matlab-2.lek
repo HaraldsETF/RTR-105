@@ -26,3 +26,5 @@ P = U.*I ( ar punktu parādīs pareizu, jo būs parasta reizināšana)
 ones(2,3) (veido matricu 2x3 parametros ar visiem cipariem 1 )
 zeros(3,4) (veido matricu 3x4 parametros ar visiem cipariem 0 )
 ones(2,3)*pi (matrica 2x3 veidota no pi )
+
+help logspace ( palīdzība logspace komandām)
