@@ -5,3 +5,24 @@ B = [1;2;3]; (vektors kolonā)
 
 -matricas veidošana
 C = [1 2 3 ; 4 5 6 ; 7 8 9];
+(matricas atdala ar tukšumu vai komatu / rindiņas atdala ar ; )
+
+-darbības
+A = [1 2 ; 3 4];
+B = [5 6 ; 7 8];
+C = A + B
+D = A - B
+E = A * B
+(punktiņveida reizinājums, tas vnk reizina tos skaitļus, tā pat kā saskaitot, nevis kolonu ar rindu)
+F = A.*B
+
+( 1e-3 = 10^-3 )
+
+U = [1 2 3 4 5];
+I = [1 2 3 4 5]*1e-3; (0.001 0.002 0.003 0.004 0.005)
+P = U*I (tas rādīs nepareizu atb)
+P = U.*I ( ar punktu parādīs pareizu, jo būs parasta reizināšana)
+
+ones(2,3) (veido matricu 2x3 parametros ar visiem cipariem 1 )
+zeros(3,4) (veido matricu 3x4 parametros ar visiem cipariem 0 )
+ones(2,3)*pi (matrica 2x3 veidota no pi )
