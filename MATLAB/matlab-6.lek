@@ -1,0 +1,77 @@
+ %% Polinomiālā aproksimācija un interpolācija
+ %* Polinomiālā interpolācija
+ %% Pieņemsim ka mums ir jāuzzīmē šāda sakarība
+U = 0:0.01:2;
+i = 1e-6: a = 5;
+I = i0*(exp(a*U)-1);
+!!! Undefined function or variable 'i0' !!!
+
+i0 = 1e-6; a = 5;
+I = i0*(exp(a*U)-1);
+figure(1), plot(U,I)
+
+%% pieņemsim kā to sakarību es nemaz nezinu
+  Udk = [2 1.85 1,48 1 0]; %tas ir X
+  Idk = [21,2 10 1,7 0,3 0]*1e-3; %tas ir Y
+  hold on
+  plot(Udk,Idk,'o')
+%% tā kā analītosko sakarību mēs "nezinām"
+  figure(2), plot(Udk,Idk,'o-')
+%% savienojot ar taisni iznāca lauztā līnija - tas mums...
+%% Lai nebūtu lauztā līnija, meklēsim sakarību
+% kas apraksta doto punktu 
+% meklēsim to sakarību polinomiālā veidā
+  syms x1 C1 C2 C3 C4 C5
+  [x1^4 x1^3 x1^2 x1^1 x1^0]*[C1;C2;C3;C4;C5]
+  ans = 
+  C1*x1^4 + C2*x1^3 + C3*1^2 + C4*x1 + C5
+  
+%% tagad atkārtosim to pašu ar cipariem 
+  X = vander(Udk)
+  X = ...atb
+  
+  Y = Idk'
+%% risināsim vienādojumu sistēmu
+  C = X\Y %šeit ir apslēpta vienādojumu sistēma
+  C = ...atb
+
+  format compact
+%% liksim polinomā
+% samazinot soli
+  U = 0:0.01:2;
+  I = C(1)*U.^4+C(2)*U.^3+C(3)*U.^2+C(4)*U+C(5);
+  figure(1), hold on, plot(U,I,':k')
+  shg
+%% Šo gadījumu sauc par polinomiālu interpolāciju
+% tas ir tad, kad polinoma pakāpe ir N
+% bet mērījuma punktu skaits ir N+1
+% Polinoms iet tieši caur mērījuma punktiem
+
+% tā kā mums punktu skaits ie piesiets pie polinoma pakāpes, mēs varam palielināt vai samazināt punktu skaitu.
+  C = polyfit(Udk,Idk,4)
+  C = ...atb
+%% Mēģināsim izmest kādu punktu, lai samazinātu polinoma pakāpi
+  Udk
+  Udk = ...atb
+  Idk
+  Idk = ...atb
+  
+  Udk(2)=[];  //izņēma otro skaitli no matricas
+  Idk(2)=[];  //izņema otro skaitli no matricas
+  
+  C = polyfit(Udk,Idk,3);
+  U = 0:0.01:2;
+%I = C(1)*U.^3+C(2)*U.^2+C(3)*U+C(4);
+  I = polyval(C,U);
+  figure(1), hold on, plot(U,I,':r')
+%%
+% * Polinomiālā aproksimācija
+% ja mērījumu punktu skaits = N
+% bet polinomā pakāpe ir < (N-1)
+  xlim([0 2])
+% pienemsim ka ir doti mērījumu punkti
+  x = [2 1.85 1.48 1 0];
+  y = [21.2 10 1.7 0.3 0]*1e-3;
+  xm = [2 1.85 1.48 1 0];
+  ym = [21.2 10 1.7 0.3 0]*1e-3;
+  
